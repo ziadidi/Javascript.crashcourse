@@ -112,17 +112,82 @@ let isStoreOpen = false;
     console.log("print the receipt")
   } */
 
-  //    && formatting best practice
-
+//    && formatting best practice
 
 //    if (cash >= price && isStoreOpen === false) ---> same as doing below but "worse"
 
 //    if (cash >= price && !isStoreOpen) ------------> best practice
 
-
 //    AND
-
 
 //   if (cash >= price && isStoreOpen === true) --> bad prectice, do below
 
 //   if (cash >= price && isStoreOpen) -----------> best practice
+
+//Falsy Values,  is considered as false when converted to a boolean most of these are:
+/*
+  -undefined
+  -null
+  -NaN
+  - 0
+  -"" 
+ -false
+ */
+
+// TRUTHY VALUES (is considered as true when converted to a boolean)
+/*10
+ * 3.14
+ * diancinios simplified
+ * false
+ * 0
+ * []
+ * {}
+ */
+
+/*let val = "Ancinio";
+
+if (val) {
+  console.log(!!val);
+} else {
+  console.log(!!val);
+}*/
+
+/* for the if statement to run it just needs to be a truthy value, 
+   and for the else to run the statement (if ("") ) needs to be a falsy value
+   no need to memorise this, just use !!0 to know if its a truthy or falsy 
+*/
+
+/* TERNARY OPERATORS
+   a shortcut for an  if else condition 
+   isObese ? 'unhealthy' : 'healthy'
+
+   ex:
+let hot = false
+
+hot ? console.log("weather is hot outside") : console.log("weather is cold")
+ */
+
+//turnary operators (used for une line of code)
+/*let subscribed = true
+let loggedIn = true
+
+let str = subscribed && loggedIn ? "show the video" : "hide the video"
+console.log(str);
+*/
+
+//prova
+
+/*let cash = 50;
+let price = 40;
+let isStoreOpen = true;
+
+let str = cash >= price && isStoreOpen ? "give receipt" : "do not give receipt"
+console.log(str)*/
+// or
+let cash = 50;
+let price = 40;
+let isStoreOpen = true;
+
+cash >= price && isStoreOpen ? console.log("give receipt") : console.log("do not give receipt")
+  
+// LOOPS
