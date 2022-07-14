@@ -184,10 +184,90 @@ let isStoreOpen = true;
 let str = cash >= price && isStoreOpen ? "give receipt" : "do not give receipt"
 console.log(str)*/
 // or
-let cash = 50;
+/*let cash = 50;
 let price = 40;
 let isStoreOpen = true;
 
-cash >= price && isStoreOpen ? console.log("give receipt") : console.log("do not give receipt")
-  
+cash >= price && isStoreOpen ? console.log("give receipt") : console.log("do not give receipt")*/
+
 // LOOPS
+
+//DRY (dont repeat your self)
+
+//while loop
+/*let count = 1;
+
+while (count <= 100) {
+   console.log(count)
+   count = count + 1;
+}*/
+
+//for loop
+
+/*for (let i = 0; i < 3; i = i + 1) {
+console.log(i)
+}*/
+//same
+/*for (let i = 0; i < 100; i ++) {
+console.log(i + 1)
+}*/
+// or
+/*for (let i = 1; i <= 100; i ++) {
+   console.log(i)
+   }*/
+
+//TEST
+/*for (let i = 1; i <= 100; i++) {
+
+   if (i % 3 === 0 && i % 5 === 0) {
+   console.log(`${i} -> Frontend Simplified`)
+  }
+  else if (i % 3 === 0) {
+    console.log(`${i} -> Frontend`);
+  }
+  else if (i % 5 === 0) {
+    console.log(`${i} -> Simplified`);
+  }
+  else {
+   console.log(`${i} -> ${i}`)
+  }
+  
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for (let i = 1; i <=20; ++i) {
+
+   if (i % 3 === 0 && i % 5 === 0) {
+      console.log(`${i} -> Frontend Simplified`)
+   }
+
+   else if (i % 3 === 0) {
+      console.log(`${i} -> Frontend`)
+   }
+
+   else if (i % 5 === 0) {
+      console.log(`${i} -> Simplified`)
+   }
+
+   else if (i % 2 === 0) {
+      console.log(`${i} -> yaaaaaaas `)
+   }
+
+   else {
+      console.log(`${i} -> ${i}`)
+   }
+}
