@@ -1,9 +1,9 @@
-/* STRING 
+/* STRING */
 
-console. log("Hello World"[10])
+/*console. log("Hello World"[10])
 console. log("tiamota ntissimo".length)
 let str = "diane" 
- console.log(str[str.length - 1]) this is the same 
+ console.log(str[str.length - 1])  this is the same 
  let str = "diane"
  console.log(str[5 - 1]) */
 
@@ -235,21 +235,7 @@ console.log(i + 1)
 }*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-for (let i = 1; i <=20; ++i) {
+/*for (let i = 1; i <=20; ++i) {
 
    if (i % 3 === 0 && i % 5 === 0) {
       console.log(`${i} -> Frontend Simplified`)
@@ -270,4 +256,181 @@ for (let i = 1; i <=20; ++i) {
    else {
       console.log(`${i} -> ${i}`)
    }
+}*/
+
+
+/*for (let i = 1; i <= 250; ++i) {
+    if (i % 7 === 0 && i % 4 === 0) {
+      console.log(`${i} -> scoregge`)
+    }
+
+    else if (i % 4 === 0) {
+      console.log(`${i} -> caghetto`)
+    }
+
+    else if (i % 7 === 0) {
+      console.log(`${i} -> mestruo`)
+    }
+
+    else {
+      console.log(`${i} -> ${i}`)
+    }
+}*/
+
+// quiz (print out every character from the string)
+//`const` is better practice in this case bur let is fine
+ /*let str = "Frontend Simplifid"
+   for (let i = 0; i < str.length; i++) {
+     console.log(str[i]);
+   }*/
+
+   // FUNCTIONS 
+   /*(it is a block of code designed to perform a particular task)
+
+   //Function definition
+   function welcomePersonToFES (name) {
+      console.log(`Welcome to FES, ${name}`)
+   }
+
+   //Call the Function
+   welcomePersonToFES (`Anto`);                    
+   welcomePersonToFES (`Diane`);
+
+   function welcomePersonToFES(firstName, lastName) {
+      console.log(`Welcome to FES, ${firstName} ${lastName}`)
+   }
+
+   welcomePersonToFES (`Anto`, `Pucci`);
+   welcomePersonToFES (`Diane`, `Spada`);
+
+   function fn() {
+      return 5
+     console.log('my function')
+   }
+
+   console.log(fn());
+   
+
+   function sumOfTwoNumbers(num1, num2) { //parameter
+      return num1 + num2 /* +, *, -, / 
+   }
+
+   console.log(sumOfTwoNumbers(10, 10)); //argument 
+   */
+
+   /* create a function that converts Celsius to Fahrenheit 
+   formula:
+   F = C x 1.8 + 32
+   */
+  /*function celsiusFahrenheit(cel) {
+   return cel * 1.8 + 32
+  }
+
+  console.log(celsiusFahrenheit(0));
+  console.log(celsiusFahrenheit(10));
+  console.log(celsiusFahrenheit(30));  
+
+  // or
+  const celsiusFahrenheit = (cel) => {
+   return cel * 1.8 + 32
+  }
+
+  console.log(celsiusFahrenheit(0))
+  */
+
+  // ARRAYS
+  /*let item1 = 20
+  let item2 = 30
+  let item3 = 40
+  let item4 = 50
+  let item5 = 100
+ 
+  same as above */
+ /* 
+ let arr = [20, 30, 40, 50, 100  you can put a string, boolean,... ]
+  
+  // first element of array:
+  console.log(arr[0])
+
+  // last element of array:
+  console.log(arr[arr.length - 1])
+
+  // add an element with the .push method at the end
+  arr.push(200)
+
+  console.log(arr);*/
+
+// js executes line by line
+
+/*let arr = [20, 30, 40, 50, 100]
+
+// call back function syntax
+  let newArr = arr.filter((element) => {
+   console.log(element)
+   if (element < 50) {
+      return true;
+   }
+  })
+
+  console.log(newArr)
+
+
+  // short way
+  let arr = [20, 30, 40, 50, 100]
+
+  let newArr = arr.filter(element => element < 50) 
+
+  console.log(newArr)
+//if we have only have 1 variable we can erase ()
+*/
+
+// Filter out all the 'FAIL' elements in an array
+
+/*let grades = ['A+', 'A', 'FAIL']
+let goodGrades = grades.filter((element) => {
+  console.log(element)
+  if (element !== 'FAIL') {
+   return true;
+  }
+})
+
+console.log(goodGrades)
+
+//short way
+
+let grades = ['A+', 'A', 'FAIL']
+
+let goodGrades = grades.filter(element => element !== 'FAIL')
+
+console.log(goodGrades)
+
+// dont use the array.filter
+let grades = ['A+', 'A', 'FAIL']
+
+let goodGrades = []
+
+for (let i = 0; i < grades.length; ++i) {
+   if (grades [i] !== 'FAIL') {
+     goodGrades.push(grades[i]);
+   }
 }
+console.log(goodGrades);
+*/
+
+// new array method (.map) it loops over every element and turn them into return
+
+/*let arr = [1, 4, 9, 16]
+//long way
+let newArr = arr.map((element) => {
+console.log(element)
+return undefined;
+})
+
+console.log(newArr)
+*/
+//short way
+let arr = [1, 4, 9, 16]
+
+let newArr = arr.map(element => 'dog')
+
+console.log(newArr)
