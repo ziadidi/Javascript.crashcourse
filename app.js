@@ -472,14 +472,14 @@ let userFirstName = 'Antonio'
 let userLastName = 'Pucci'
 let userDiscordId = 'Antonio Pucci#1608'
 let userSubscriptionStatus = 'VIP'
-*/
+
 
 // do this
 let users = [
   {
     username: "Anto",
     email: "dianepucci18@tuasorella.it",
-    password: 'cacacucu',
+    password: "cacacucu",
     subscriptionStatus: "Rubato",
     discordId: "anche no#0001",
     lessonsCompleted: [0, 1],
@@ -487,7 +487,7 @@ let users = [
   {
     username: "Diane",
     email: "antocanto13@tuasorella.it",
-    password: 'cucucaca',
+    password: "cucucaca",
     subscriptionStatus: "mio",
     discordId: "anche mai#0001",
     lessonsCompleted: [0, 1, 2, 5],
@@ -495,19 +495,93 @@ let users = [
   {
     username: "zioPippo",
     email: " doccia@tuasorella.it",
-    password: 'grattini',
+    password: "grattini",
     subscriptionStatus: "colpipo",
     discordId: "crocchette#0001",
-    lessonsCompleted: 'tutte',
+    lessonsCompleted: "tutte",
   },
 ];
 
 function login(email, password) {
-   for (let i = 0; i < users.length; ++i) {
+  for (let i = 0; i < users.length; ++i) {
+    //console.log('this ran@@@')
+    if (users[i].email === email) {
       console.log(users[i]);
-   }
+      if (users[i].password === password) {
+        console.log("log the user in - the details are correct");
+      } else {
+        console.log("password is incorrect");
+      }
+      return;
+    }
+  }
+  console.log("could not find an email that matches");
 }
 
-login('dianepucci18@tuasorella.it', 'cacacucu');
+login("ppp@tuasorella.it", "cacacucu");
 //console.log(users[0].lessonsCompleted.map(elem => elem * 2));
 //console.log(users[0]
+
+// practice
+
+function register(user) {
+   users.push(user);  // push the object into the array
+}
+
+register( { //function
+  username: "Diane",
+  email: "antocanto13@tuasorella.it",
+  password: "cucucaca",
+  subscriptionStatus: "mio",
+  discordId: "anche mai#0001",
+  lessonsCompleted: [0, 1, 2, 5]
+} );
+
+console.log(users);
+
+function login(email, password) {
+   for (let i = 0; i < users.length; ++i) {
+     //console.log('this ran@@@')
+     if (users[i].email === email) {
+       console.log(users[i]);
+       if (users[i].password === password) {
+         console.log("log the user in - the details are correct");
+       } else {
+         console.log("password is incorrect");
+       }
+       return;
+     }
+   }
+ }
+ 
+ login("antocanto13@tuasorella.it", "cucucaca");
+*/
+/*
+// DOM (document object modul) allows you to access and change 
+// the styling and content of elements on your website
+
+// first way of accessing an element (most useful u can also do 'h1' or if its a class '.title' or '.' '#')
+console.log(document.querySelector('#title'));
+
+// second way
+console.log(document.getElementById('title'))
+
+
+// u can change HTML
+//document.querySelector('#title').innerHTML = 'Diancinio`s'
+document.querySelector('#title').innerHTML += ' Diancinio`s'
+
+// u can change CSS
+document.querySelector('#title').style.fontSize = '30px'
+
+function btn() {
+   document.querySelector('#title').style.color = 'purple'
+   console.log('clicked')
+}
+*/
+
+// dark theme
+
+function toggleDarkMode() {
+   document.querySelector('body').classList.toggle('dark-theme')
+}
