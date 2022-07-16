@@ -234,7 +234,6 @@ console.log(i + 1)
   
 }*/
 
-
 /*for (let i = 1; i <=20; ++i) {
 
    if (i % 3 === 0 && i % 5 === 0) {
@@ -258,7 +257,6 @@ console.log(i + 1)
    }
 }*/
 
-
 /*for (let i = 1; i <= 250; ++i) {
     if (i % 7 === 0 && i % 4 === 0) {
       console.log(`${i} -> scoregge`)
@@ -279,13 +277,13 @@ console.log(i + 1)
 
 // quiz (print out every character from the string)
 //`const` is better practice in this case bur let is fine
- /*let str = "Frontend Simplifid"
+/*let str = "Frontend Simplifid"
    for (let i = 0; i < str.length; i++) {
      console.log(str[i]);
    }*/
 
-   // FUNCTIONS 
-   /*(it is a block of code designed to perform a particular task)
+// FUNCTIONS
+/*(it is a block of code designed to perform a particular task)
 
    //Function definition
    function welcomePersonToFES (name) {
@@ -318,11 +316,11 @@ console.log(i + 1)
    console.log(sumOfTwoNumbers(10, 10)); //argument 
    */
 
-   /* create a function that converts Celsius to Fahrenheit 
+/* create a function that converts Celsius to Fahrenheit 
    formula:
    F = C x 1.8 + 32
    */
-  /*function celsiusFahrenheit(cel) {
+/*function celsiusFahrenheit(cel) {
    return cel * 1.8 + 32
   }
 
@@ -338,15 +336,15 @@ console.log(i + 1)
   console.log(celsiusFahrenheit(0))
   */
 
-  // ARRAYS
-  /*let item1 = 20
+// ARRAYS
+/*let item1 = 20
   let item2 = 30
   let item3 = 40
   let item4 = 50
   let item5 = 100
  
   same as above */
- /* 
+/* 
  let arr = [20, 30, 40, 50, 100  you can put a string, boolean,... ]
   
   // first element of array:
@@ -429,8 +427,87 @@ return undefined;
 console.log(newArr)
 */
 //short way
-let arr = [1, 4, 9, 16]
+/*let arr = [1, 4, 9, 16]
 
 let newArr = arr.map(element => 'dog')
 
 console.log(newArr)
+
+
+// practice
+
+//long way
+let dollars = [1, 5, 10, 3];
+
+let cents = dollars.map(element => {
+   return * 100;
+})
+
+console.log(cents)
+
+// short way
+let dollars = [0, 10, 20];
+
+let cents = dollars.map(element => element * 100)
+
+console.log(cents)
+
+
+// now without the .map method
+
+let dollars = [1, 5, 10, 3];
+
+let cents = [];
+
+for (let i = 0; i < dollars.length; ++i) {
+   cents.push(dollars[i] * 100);
+}
+console.log(cents);
+*/
+
+//OBJECTS (used to store multiple propeties in one  variable)
+
+/* dont do this
+let userFirstName = 'Antonio'
+let userLastName = 'Pucci'
+let userDiscordId = 'Antonio Pucci#1608'
+let userSubscriptionStatus = 'VIP'
+*/
+
+// do this
+let users = [
+  {
+    username: "Anto",
+    email: "dianepucci18@tuasorella.it",
+    password: 'cacacucu',
+    subscriptionStatus: "Rubato",
+    discordId: "anche no#0001",
+    lessonsCompleted: [0, 1],
+  },
+  {
+    username: "Diane",
+    email: "antocanto13@tuasorella.it",
+    password: 'cucucaca',
+    subscriptionStatus: "mio",
+    discordId: "anche mai#0001",
+    lessonsCompleted: [0, 1, 2, 5],
+  },
+  {
+    username: "zioPippo",
+    email: " doccia@tuasorella.it",
+    password: 'grattini',
+    subscriptionStatus: "colpipo",
+    discordId: "crocchette#0001",
+    lessonsCompleted: 'tutte',
+  },
+];
+
+function login(email, password) {
+   for (let i = 0; i < users.length; ++i) {
+      console.log(users[i]);
+   }
+}
+
+login('dianepucci18@tuasorella.it', 'cacacucu');
+//console.log(users[0].lessonsCompleted.map(elem => elem * 2));
+//console.log(users[0]
