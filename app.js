@@ -578,10 +578,10 @@ function btn() {
    document.querySelector('#title').style.color = 'purple'
    console.log('clicked')
 }
-*/
+
 
 // dark theme
 
 function toggleDarkMode() {
    document.querySelector('body').classList.toggle('dark-theme')
-}
+}*/
